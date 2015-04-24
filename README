@@ -1,0 +1,71 @@
+La base Marche.
+
+Pour l'utiliser :
+  lancer tomcat "unnamed" (ouais j'ai pas chercher a toucher au nom)
+  si ya des lignes rouges c'est normal ... attend un peu
+
+  normalement il t'ouvre une page (http://localhost:8080/tp3/rest/)
+
+  rajoute resume a la fin de l'url (ce qui donne http://localhost:8080/tp3/rest/resume )
+  et il te fais la requete get qui te retourne tous les CV.
+  A l'initialisation ya moi :
+        <cvs>
+            <cvEntries>
+                <age>21</age>
+                <firstName>Cauchois</firstName>
+                <name>Steeven</name>
+                <objectif>Objectif</objectif>
+            </cvEntries>
+        </cvs>
+
+  Pour envoyer une requete non GET genre POST ( de toute façon ya que post d'implementer )
+  il faut utiliser restClient (plugin firefox que j'ai installer)
+  pour ça clique sur le logo d'un soleil sur fond bordeau en haut a droite de firefox ou chrome://restclient/content/restclient.html
+
+        Si tu ne vois pas de paneau Header entre method et body :  clique sur Headers -> Content-Type : application/xml
+
+
+
+  De la, dans l'url tu peux test le get et l'url http://localhost:8080/tp3/rest/resume par exemple
+
+  il te renverra dans le response body ce que tu voyais sur la page.
+
+  Du coup tu peux tester un POST avec
+  <cv>
+      <age>99</age>
+      <firstName>Lobez</firstName>
+      <name>Steeve</name>
+      <objectif>Comprendre le tp :-P</objectif>
+  </cv>
+
+  refait le test avec get (qui renvois tous les cv) : soit reload la page http://localhost:8080/tp3/rest/resume/ soit via le plug in
+
+  Si tu veux comprendre ya le code ;-) et je serais sur ts dans l'aprem
+
+  Enfin j'ai reussi a config un deploiement sur openshift
+
+  il y a donc
+
+2 branche de repo :
+  une git
+    -> git push origin master
+  une de deploiement openshift
+    -> git push deploy master
+
+le git nous sert a nous
+le deploiement sert a utiliser ce site
+
+http://cauchst1-lw2.rhcloud.com/resume
+
+
+tu peux utiliser cette URL dans le plug-in
+
+
+
+
+Voila Voila.
+PS : Le prof m'as fait comprendre que c'etait censé être un projet individuel ...
+       Je pense qu'il serait pas mal soit qu'on rajoute des trucs chacun de nos cotés soit dire
+       on bosse a coté du coup on a loupé des cours du coup on a le même code car on se ratraperai l'un l'autre
+
+Au pire on revoit tous ça dimanche :-)
